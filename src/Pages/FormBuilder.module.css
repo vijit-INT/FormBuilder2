@@ -1,0 +1,18 @@
+/* ---------------------------------------------- */
+/* projectBar css */
+
+.borjectbarMainDiv{
+   height: 63px;
+   width: 90%;
+   margin-left: 5% !important;
+   border: 2px solid rgb(199, 199, 199);
+   margin: 2px;
+   justify-content: center !important;
+   display: flex;
+   
+}
+
+.modal {
+    height: 500px;
+    width: 600px;
+}
