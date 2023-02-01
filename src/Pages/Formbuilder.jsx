@@ -24,7 +24,7 @@ const Formbuilder = () => {
     <div>
       <ProjectBar data={fData} />
      
-       <hr style={{width: "90%"}}/>
+       <hr style={{width: "87%"}}/>
        
         <ReactFormBuilder
          onPost={onPost} 

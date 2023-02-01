@@ -2799,12 +2799,9 @@
     background: #fafafa;
     padding: 10px;
     box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.1);
-    min-height: 750px;
-    float: left !important;
-    min-height: 100vh;
     height: 100%;
-    width: 100%;
-    /* position: fixed; */
+    min-height: calc( 100vh - 400px );
+    float: left !important;
     overflow-y: auto;
     left: 5.5%;
 }
