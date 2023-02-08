@@ -1,15 +1,23 @@
+/* Formbuilder css
+------------------------------------------------ */
+.fbSubdiv1{
+ /* padding-top: 70px; */
+ width:98%;
+ margin-left: .5%;
+}
+
+
+
 /* ---------------------------------------------- */
 /* projectBar css */
 
 .borjectbarMainDiv{
    height: 63px;
-   width: 87%;
-   margin-left: 5% !important;
+   width: calc(100% - 4px);
    border: 2px solid rgb(199, 199, 199);
    margin: 2px;
-   /* justify-content: center !important; */
-   /* display: flex; */
-   
+ 
+ 
 }
 .borjectbarMainDiv > h3 {
    float: left !important;
@@ -23,9 +31,28 @@
 }
 
 .modal {
-    height: 500px;
-    width: 600px;
+   /* position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: rgba(0, 0, 0, 0.5);     
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   z-index: 1; */
+   width: 700px;
+   height: 600px
 }
+
+.modalBody {
+   background: white;
+   padding: 20px;
+   border-radius: 10px;
+   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+   height: 400px;
+   width: 600px
+ }
 
 /* ----------------------------------------------
 Form presenter css */
@@ -33,8 +60,8 @@ Form presenter css */
 .fpMainDiv{
   border: 2px solid black;
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
   
 }
 
@@ -50,7 +77,7 @@ Form presenter css */
 .fpSubDiv2{
     height: 100%;
     width: 85%;
-    border: 2px solid black;
+    /* border: 2px solid black; */
 
  }
 

@@ -3,12 +3,12 @@ import { createSlice } from '@reduxjs/toolkit';
 const FormSchema = createSlice({
     name: 'FormSchema',
     initialState:{
-       FormSchema: []
+       FormSchema:[]
     },
     reducers:{
         addArray : (values, action) => {
-            console.log("redux", action.payload)
-            values.FormSchema = [...action.payload.task_data]      
+            console.log("redux", action.payload.components)
+           values.FormSchema =   action.payload
         }
     }
 })
