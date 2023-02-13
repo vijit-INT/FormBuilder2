@@ -3,28 +3,40 @@ import Button from '../Components/button'
 import styles from './FormBuilder.module.css'
 import { Modal } from "react-responsive-modal";
 import "react-responsive-modal/styles.css";
-// import { ReactFormGenerator } from 'react-form-builder2';
-// import * as variables from '../variables'
 import { useNavigate } from 'react-router-dom';
 import { Formio } from "react-formio";
-import { useSelector } from 'react-redux';
+import { formSchema } from '../Services/SaveJsonSchema';
 
 const ProjectBar = (props) => {
-
-    // const rData = useSelector((state)=> state.Form.FormSchema)
+    const [id, setID] = useState(-1);
+    console.log("props", props)
+    // useEffect(()=>{
+    //     let arr= [...props.formData];
+    //    for(let i=0; i<arr.lenght-1; i++){
+    //     setID(id + 1)
+    //     arr[i].push({id: id})
+    //    }
+    //   console.log("updated Array",arr)
+    // },[props]);
     const navigate = useNavigate();
-    const [pData, setpData] = useState(false)
+
     const [preview, setPreview] = useState(false);
 
     const previewForm = () => {
         console.log("prop", props.formData)
         setPreview(true)
-        Formio.createForm(document.getElementById('formio'), { components: props.formData})
+        Formio.createForm(document.getElementById('formio'), { components: props.formData })
     }
 
     const build = () => {
         console.log("onBuild", props.formData)
-        navigate("/formPresenter")
+        formSchema(props.formData)
+            .then((res) => console.log("axios responce",res),
+                alert("data Added")
+            )
+            .catch((error) => console.log(error))
+        
+
     }
 
     const onCloseModal = () => {
